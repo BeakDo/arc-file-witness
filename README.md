@@ -8,6 +8,8 @@ This is a small open-source prototype, not a document-notarization service. A re
 
 The contract and static app compile and pass local checks. **There is no Arc mainnet deployment yet.** `src/config.js` intentionally has an empty contract address, so anchoring and verification remain disabled until a deployment is independently checked and recorded. This repository must not be described as a live Arc submission before that step.
 
+The [static preview](https://beakdo.github.io/arc-file-witness/) is public. It currently supports local file fingerprinting only.
+
 ## Local development
 
 Requires Node.js 22+.

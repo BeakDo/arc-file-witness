@@ -6,13 +6,13 @@ This is a small open-source prototype, not a document-notarization service. A re
 
 ## Status
 
-The contract and static app compile and pass local checks. **There is no Arc mainnet deployment yet.** `src/config.js` intentionally has an empty contract address, so anchoring and verification remain disabled until a deployment is independently checked and recorded. This repository must not be described as a live Arc submission before that step.
+The [FileWitness contract](https://explorer.arc.io/address/0x64Dd83212c14795700A279988F5908D1BBf00B56?tab=contract) is deployed on Arc mainnet and its source is verified as an exact match. The [deployment transaction](https://explorer.arc.io/tx/0x8915cf75f26f5b4bcdc115500abd6f6000f313298802d724054ed70c93dd2260) succeeded with zero value. The contract address is configured in `src/config.js`. A sample anchor and independent end-to-end verification are still pending; this is not yet a completed grant submission.
 
-The [static preview](https://beakdo.github.io/arc-file-witness/) is public. It currently supports local file fingerprinting only.
+The [static app](https://beakdo.github.io/arc-file-witness/) is public. After this update is published, it supports local file fingerprinting, user-approved anchoring, and read-only verification against the deployed contract. Each anchor transaction requires the user's own wallet confirmation and Arc USDC gas.
 
 ## Public test file
 
-[`examples/public-demo.txt`](examples/public-demo.txt) is an intentionally public, non-sensitive file for a reproducible demo. Download the raw file and choose it in the app; the browser will hash its exact bytes locally. Once the contract is deployed, the README will link the sample anchoring transaction so anyone can check the same file against its Arc record. Editing even one byte produces a different fingerprint.
+[`examples/public-demo.txt`](examples/public-demo.txt) is an intentionally public, non-sensitive file for a reproducible demo. Download the raw file and choose it in the app; the browser will hash its exact bytes locally. The sample anchoring transaction will be linked here after it is independently verified. Editing even one byte produces a different fingerprint.
 
 Expected SHA-256 for the repository's LF-terminated file: `670b0273236fd45a63cf7f54ac47852845767dcd9160e7d5ade5934d34626a54`. Git keeps this example's line endings as LF. Use the raw file rather than copying its displayed text.
 

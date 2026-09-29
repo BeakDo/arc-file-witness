@@ -6,13 +6,13 @@ This is a small open-source prototype, not a document-notarization service. A re
 
 ## Status
 
-The [FileWitness contract](https://explorer.arc.io/address/0x64Dd83212c14795700A279988F5908D1BBf00B56?tab=contract) is deployed on Arc mainnet and its source is verified as an exact match. The [deployment transaction](https://explorer.arc.io/tx/0x8915cf75f26f5b4bcdc115500abd6f6000f313298802d724054ed70c93dd2260) succeeded with zero value. The contract address is configured in `src/config.js`. A sample anchor and independent end-to-end verification are still pending; this is not yet a completed grant submission.
+The [FileWitness contract](https://explorer.arc.io/address/0x64Dd83212c14795700A279988F5908D1BBf00B56?tab=contract) is deployed on Arc mainnet and its source is verified as an exact match. The [deployment transaction](https://explorer.arc.io/tx/0x8915cf75f26f5b4bcdc115500abd6f6000f313298802d724054ed70c93dd2260) succeeded with zero value. The contract address is configured in `src/config.js`. A [public sample anchor](https://explorer.arc.io/tx/0x5cef3226b02b35898d60188f30a08f1bcd896e7b5507f5b224962db654bb059d) also succeeded; its `FileAnchored` event contains the expected digest, and the live app independently reads the matching timestamp. This project is not yet a completed grant submission or a grant recipient.
 
-The [static app](https://beakdo.github.io/arc-file-witness/) is public. After this update is published, it supports local file fingerprinting, user-approved anchoring, and read-only verification against the deployed contract. Each anchor transaction requires the user's own wallet confirmation and Arc USDC gas.
+The [static app](https://beakdo.github.io/arc-file-witness/) is public. It supports local file fingerprinting, user-approved anchoring, and read-only verification against the deployed contract. Each anchor transaction requires the user's own wallet confirmation and Arc USDC gas.
 
 ## Public test file
 
-[`examples/public-demo.txt`](examples/public-demo.txt) is an intentionally public, non-sensitive file for a reproducible demo. Download the raw file and choose it in the app; the browser will hash its exact bytes locally. The sample anchoring transaction will be linked here after it is independently verified. Editing even one byte produces a different fingerprint.
+[`examples/public-demo.txt`](examples/public-demo.txt) is an intentionally public, non-sensitive file for a reproducible demo. Download the raw file and choose it in the app; the browser will hash its exact bytes locally. Enter the [anchoring wallet address](https://explorer.arc.io/address/0x9c9F29FAC4DDe40b5983B27Aeec01575458b42bF) and click **Verify timestamp**. The app reads the first record at 2026-09-30 01:26:34 Asia/Seoul from the [sample transaction](https://explorer.arc.io/tx/0x5cef3226b02b35898d60188f30a08f1bcd896e7b5507f5b224962db654bb059d). Editing even one byte produces a different fingerprint and will not match this record.
 
 Expected SHA-256 for the repository's LF-terminated file: `670b0273236fd45a63cf7f54ac47852845767dcd9160e7d5ade5934d34626a54`. Git keeps this example's line endings as LF. Use the raw file rather than copying its displayed text.
 

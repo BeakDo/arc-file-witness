@@ -30,7 +30,7 @@ Arc mainnet uses chain ID `5042`, RPC `https://rpc.mainnet.arc.io`, and native U
 2. In the wallet, select Arc mainnet. In Remix, choose **Injected Provider**, select `FileWitness`, estimate the deployment gas, and review the wallet's USDC cost before approving. Keep the transaction hash and contract address.
 3. Open the deployment in the official [Arc explorer](https://explorer.arc.io/), confirm chain `5042`, successful status, contract bytecode, and deployer address. Set the verified address in `src/config.js` and rebuild.
 4. Anchor a non-sensitive sample file through the app, then verify the same file and wallet address. Change one byte and confirm it no longer matches. Confirm the transaction and record on Arc explorer.
-5. Publish the repository and static `dist/` app. Add the live URL, contract address, deployment transaction, and sample transaction to this README. Only then is it ready for a public grant submission.
+5. Rebuild the GitHub Pages app with `npm run build:pages` and publish the updated `docs/` directory. Add the live URL, contract address, deployment transaction, and sample transaction to this README. Only then is it ready for a public grant submission.
 
 The maintainer is responsible for reviewing and approving each wallet action. No page visit, hash calculation, or verification triggers a signature.
 

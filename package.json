@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vite build --base ./",
+    "build:pages": "vite build --outDir docs --base ./",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --test",
     "compile": "node scripts/compile.mjs"

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Anchor and verify a private file's SHA-256 fingerprint on Arc, without uploading the file." />
+    <title>Arc File Witness</title>
+    <script type="module" crossorigin src="./assets/index-CRtJ30Bz.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CMdgRWQA.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <p class="eyebrow">ARC MAINNET · FILE INTEGRITY</p>
+        <h1>Give a file a checkable timestamp.</h1>
+        <p class="lede">Choose a file, calculate its fingerprint in your browser, and anchor that fingerprint to your wallet on Arc. Anyone with the file and your wallet address can check when you recorded it.</p>
+      </header>
+
+      <section class="card" aria-labelledby="file-title">
+        <div class="step">01 · PREPARE</div>
+        <h2 id="file-title">Choose a file</h2>
+        <p>Files stay on this device. Only a 32-byte SHA-256 digest goes on chain. Maximum file size: 20 MB.</p>
+        <input id="file" type="file" />
+        <div class="readout"><span>SHA-256 fingerprint</span><code id="digest">Choose a file to begin</code></div>
+      </section>
+
+      <section class="card" aria-labelledby="anchor-title">
+        <div class="step">02 · ANCHOR</div>
+        <h2 id="anchor-title">Record it on Arc</h2>
+        <p>Connect an EVM wallet with a little USDC on Arc for gas. The contract cannot take custody of your file or funds. Your wallet will show the transaction before you approve it.</p>
+        <button id="anchor" disabled>Anchor fingerprint</button>
+        <p id="anchor-status" class="status" role="status"></p>
+      </section>
+
+      <section class="card" aria-labelledby="verify-title">
+        <div class="step">03 · VERIFY</div>
+        <h2 id="verify-title">Check a record</h2>
+        <p>Choose the original file above, then enter the wallet address that anchored it. Reading the chain costs no gas.</p>
+        <label for="account">Anchoring wallet address</label>
+        <input id="account" type="text" autocomplete="off" spellcheck="false" placeholder="0x…" />
+        <button id="verify" disabled>Verify timestamp</button>
+        <p id="verify-status" class="status" role="status"></p>
+      </section>
+
+      <aside class="note">
+        <strong>What this proves</strong>
+        <p>A matching record shows that a wallet published this digest by the recorded block time. It does not prove who owns the wallet, that a file was delivered, its quality, or that it has not been copied. A hash of an easily guessed file can reveal which file was used.</p>
+      </aside>
+      <footer><a href="https://docs.arc.io/arc/references/connect-to-arc" target="_blank" rel="noopener noreferrer">Arc network details</a> · Open-source prototype</footer>
+    </main>
+  </body>
+</html>

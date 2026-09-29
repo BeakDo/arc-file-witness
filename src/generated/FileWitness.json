@@ -1,0 +1,77 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AlreadyAnchored",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "EmptyDigest",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "digest",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint64",
+          "name": "timestamp",
+          "type": "uint64"
+        }
+      ],
+      "name": "FileAnchored",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "digest",
+          "type": "bytes32"
+        }
+      ],
+      "name": "anchor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "anchoredAt",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600e575f5ffd5b506101eb8061001c5f395ff3fe608060405234801561000f575f5ffd5b5060043610610034575f3560e01c8063eecdf92714610038578063f8c2919d1461004d575b5f5ffd5b61004b610046366004610169565b61009b565b005b61007e61005b366004610180565b5f60208181529281526040808220909352908152205467ffffffffffffffff1681565b60405167ffffffffffffffff909116815260200160405180910390f35b806100b9576040516373ca609760e01b815260040160405180910390fd5b335f9081526020818152604080832084845290915290205467ffffffffffffffff16156100f95760405163a0094ce360e01b815260040160405180910390fd5b335f81815260208181526040808320858452825291829020805467ffffffffffffffff19164267ffffffffffffffff8116918217909255925192835292849290917f895e7696ecf19018d9b79430bc9c717b0baeebf02a8cee39e8a6aea22d95f653910160405180910390a35050565b5f60208284031215610179575f5ffd5b5035919050565b5f5f60408385031215610191575f5ffd5b82356001600160a01b03811681146101a7575f5ffd5b94602093909301359350505056fea26469706673582212203535c4d5e761d8fa035bdb3839be13b71ec4950d08ec9b75d264013e9cd7c41964736f6c63430008250033"
+}

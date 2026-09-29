@@ -1,5 +1,7 @@
 # Arc File Witness
 
+![Arc File Witness logo](assets/buidl-logo.png)
+
 Arc File Witness lets a person timestamp a file's SHA-256 fingerprint on Arc mainnet. The file is hashed locally in the browser and never uploaded. A verifier with the original file and anchoring wallet address can independently recompute the digest and read its first onchain timestamp. The contract has no custody, payment, admin, or upgrade function.
 
 This is a small open-source prototype, not a document-notarization service. A record proves only that a wallet anchored a digest by a block timestamp. It does **not** prove the wallet owner's identity, legal ownership, delivery, authorship, or the file's quality. Hashes of common or predictable files may reveal which file was used. Do not anchor sensitive files whose content could be guessed.

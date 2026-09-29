@@ -1,0 +1,3 @@
+Arc File Witness public demo
+This file contains no private information.
+Its exact bytes can be used to test an Arc timestamp and independent verification.

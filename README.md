@@ -10,6 +10,12 @@ The contract and static app compile and pass local checks. **There is no Arc mai
 
 The [static preview](https://beakdo.github.io/arc-file-witness/) is public. It currently supports local file fingerprinting only.
 
+## Public test file
+
+[`examples/public-demo.txt`](examples/public-demo.txt) is an intentionally public, non-sensitive file for a reproducible demo. Download the raw file and choose it in the app; the browser will hash its exact bytes locally. Once the contract is deployed, the README will link the sample anchoring transaction so anyone can check the same file against its Arc record. Editing even one byte produces a different fingerprint.
+
+Expected SHA-256 for the repository's LF-terminated file: `670b0273236fd45a63cf7f54ac47852845767dcd9160e7d5ade5934d34626a54`. Git keeps this example's line endings as LF. Use the raw file rather than copying its displayed text.
+
 ## Local development
 
 Requires Node.js 22+.
